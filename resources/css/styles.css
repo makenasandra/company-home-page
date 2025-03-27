@@ -12,11 +12,13 @@ body{
 
 header {
   display: flex;
-  /* position: fixed; */
+  justify-content: space-between;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  justify-content: space-between;
+  z-index: 5;
+background-color: rgb(255, 231, 235);
   padding: 1.25rem 1.5rem;
   align-items: center;
   border-bottom: rgb(251, 95, 121) solid 1px;
@@ -50,7 +52,7 @@ header {
 }
 
 /* Mission Section */
-.banner{
+#banner{
     background-image: url("../images/priscilla-du-preez-dlxLGIy-2VU-unsplash.jpg");
     background-size: cover;
     padding: 3rem 1rem;
@@ -115,20 +117,21 @@ p{
     display: flex; 
     flex-direction: column;
     border: pink solid 1px;
-    margin: 1rem;
+    margin: .5rem;
 }
 
 .team-member img{
     width: 100%;
     height: auto;
+    overflow: hidden;
 }
 
 .team-member h3{
-    width: 50%;
+    
 }
 
 .team-member p{
-    width: 50%;
+   
 }
 
 
