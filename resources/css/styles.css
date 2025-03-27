@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body{
+    position: relative;
+}
+
+header {
+  display: flex;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  align-items: center;
+  border-bottom: rgb(251, 95, 121) solid 1px;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: 600;
+    color: rgb(251, 95, 121);
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  align-self: center;
+}
+
+.nav-item {
+  margin: 0 1rem;
+}
+
+.nav-item a{
+    font-size: 1.2rem;
+    color: rgb(164, 56, 74);
+}
+
+.main-content{
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Mission Section */
+.banner{
+    background-image: url("../images/priscilla-du-preez-dlxLGIy-2VU-unsplash.jpg");
+    background-size: cover;
+    padding: 3rem 1rem;
+    width: 100%
+}
+
+.mission-section{
+    background-color: rgb(250, 239, 241, 0.7);
+    padding: 3rem 1rem;
+}
+
+.mission-section h2{
+    font-size: 3rem;
+}
+
+.mission-section span{
+    font-size: 1.5rem;
+}
+
+/* Services Section */
+ h2{
+    font-size: 3rem;
+    margin-bottom: 0.6rem;
+}
+.services{
+    display: grid;
+    grid-template: repeat(5, 1fr) / 1fr 1fr;  
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
+    border: pink solid 1px;
+    justify-content: start;
+    align-items: center;
+}
+
+img{
+    width: 90%;
+    height: auto;
+}
+
+h3{
+    font-size: 2rem;
+}
+
+p{
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+/* Team Section */
+.team-members{
+    display: flex; 
+     width: 100%;
+    /* flex-wrap: wrap;*/
+} 
+
+.team-member{
+    display: flex; 
+    flex-direction: column;
+    border: pink solid 1px;
+    margin: 1rem;
+}
+
+.team-member img{
+    width: 100%;
+    height: auto;
+}
+
+.team-member h3{
+    width: 50%;
+}
+
+.team-member p{
+    width: 50%;
+}
+
+
+
+
