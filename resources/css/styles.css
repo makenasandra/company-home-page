@@ -6,8 +6,8 @@ html {
   font-size: 16px;
 }
 
-body{
-    position: relative;
+body {
+  position: relative;
 }
 
 header {
@@ -18,16 +18,16 @@ header {
   left: 0;
   right: 0;
   z-index: 5;
-background-color: rgb(255, 231, 235);
+  background-color: rgb(255, 231, 235, 0.9);
   padding: 1.25rem 1.5rem;
   align-items: center;
   border-bottom: rgb(251, 95, 121) solid 1px;
 }
 
-.logo{
-    font-size: 2rem;
-    font-weight: 600;
-    color: rgb(251, 95, 121);
+.logo {
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgb(251, 95, 121);
 }
 
 .nav-list {
@@ -41,99 +41,182 @@ background-color: rgb(255, 231, 235);
   margin: 0 1rem;
 }
 
-.nav-item a{
-    font-size: 1.2rem;
-    color: rgb(164, 56, 74);
+.nav-item a {
+  font-size: 1.2rem;
+  color: rgb(164, 56, 74);
+  text-decoration: none;
 }
 
-.main-content{
-    padding: 1rem;
-    text-align: center;
+.nav-item a:hover {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.main-content {
+  margin-top: 5rem;
+  padding: 1rem 0 0 0;
+  text-align: center;
+}
+
+@media only screen and (max-width: 770px) {
+  header {
+    padding: 1rem 0.7rem;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+  }
+  .nav-list {
+    padding-left: 0;
+  }
+
+  .nav-item {
+    margin: 0 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  header {
+    padding: 0.7rem 0.9rem;
+  }
+  .logo {
+    font-size: clamp(1rem, 77vw, 1.5rem);
+  }
+  .nav-list {
+    padding-left: 0;
+  }
+
+  .nav-item {
+    margin: 0 0.5rem;
+  }
+
+  .nav-item a {
+    font-size: 1rem;
+  }
 }
 
 /* Mission Section */
-#banner{
-    background-image: url("../images/priscilla-du-preez-dlxLGIy-2VU-unsplash.jpg");
-    background-size: cover;
-    padding: 3rem 1rem;
-    width: 100%
+#banner {
+  background-image: url("../images/priscilla-du-preez-dlxLGIy-2VU-unsplash.jpg");
+  background-size: cover;
+  padding: 3rem 1rem;
+  width: 100%;
 }
 
-.mission-section{
-    background-color: rgb(250, 239, 241, 0.7);
-    padding: 3rem 1rem;
+.mission-section {
+  background-color: rgb(250, 239, 241, 0.7);
+  padding: 3rem 1rem;
 }
 
-.mission-section h2{
-    font-size: 3rem;
+.mission-section h2 {
+  font-size: 3rem;
 }
 
-.mission-section span{
-    font-size: 1.5rem;
+.mission-section span {
+  font-size: 1.5rem;
 }
 
 /* Services Section */
- h2{
-    font-size: 3rem;
-    margin-bottom: 0.6rem;
+h2 {
+  font-size: 3rem;
+  margin-bottom: 0.6rem;
 }
-.services{
-    display: grid;
-    grid-template: repeat(5, 1fr) / 1fr 1fr;  
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-auto-flow: row dense;
 }
-
 .service {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    margin: 1rem;
-    border: pink solid 1px;
-    justify-content: start;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 1rem;
+  border: pink solid 1px;
+  justify-content: start;
+  align-items: center;
 }
 
-img{
-    width: 90%;
-    height: auto;
+img {
+  width: 90%;
+  height: auto;
 }
 
-h3{
-    font-size: 2rem;
+h3 {
+  font-size: 2rem;
 }
 
-p{
-    margin-top: 0;
-    font-size: 1.2rem;
+p {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 770px) {
+
+}
+
+@media only screen and (max-width: 450px) {
+  .services {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
 }
 
 /* Team Section */
-.team-members{
-    display: flex; 
-     width: 100%;
-    /* flex-wrap: wrap;*/
-} 
-
-.team-member{
-    display: flex; 
-    flex-direction: column;
-    border: pink solid 1px;
-    margin: .5rem;
+.team-members {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
-.team-member img{
-    width: 100%;
-    height: auto;
-    overflow: hidden;
+.team-member {
+  display: flex;
+  flex: 1 1 300px;
+  flex-direction: column;
+  background-color: pink;
+  border-radius: 1%;
+  box-shadow: 10px 5px 5px rgb(100, 76, 80);
+  margin: 0.5rem;
+  transition: box-shadow 100ms ease-in;
 }
 
-.team-member h3{
-    
+.team-member:hover {
+  box-shadow: 0 0 0 rgb(100, 76, 80) ;
+  background-color: rgb(251, 222, 226);
 }
 
-.team-member p{
-   
+.team-member img {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 1%;
 }
 
+/* Footer Section */
+footer {
+  background-color: rgb(255, 231, 235);
+}
 
+footer .content {
+  padding: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+}
 
+@media only screen and (max-width: 450px) {
+  header {
+    padding: 0.7rem 0.45rem 0.7rem 0.8rem;
+  }
+  .logo {
+    font-size: clamp(1rem, 0.3vw, 1.5rem);
+  }
+  .nav-list {
+    padding-left: 0;
+  }
 
+  .nav-item {
+    margin: 0 0.5rem;
+  }
+
+  .nav-item a {
+    font-size: 1rem;
+  }
+}
